@@ -69,6 +69,7 @@ class CNN(nn.Module):
 net = torch.load('model_prunned_3')
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 net.to(device)
+net.eval()
 
 import time
 time_start=time.time()
